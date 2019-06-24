@@ -1,0 +1,12 @@
+<div class="container">
+<h3> Product Details <h3>
+<p>Product id: <%= @product.id %> </p>
+<p>Product Name: <%= @product.productName %> </p>
+<p>Product Brand: <%= @product.brand %> </p>
+<p>Product Price: <%= @product.cost %> </p>
+<p>Product Category: <%= @product.category %> </p>
+<p>Product Date Added: <%= @product.date %> </p>
+<p>Product Description: <%= @product.description %> </p>
+<%= image_tag (@product.image.url) if @product.image.exists? %>
+</div>
+<%= link_to "write a review", new_product_review_path(@product) %>

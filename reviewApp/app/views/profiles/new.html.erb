@@ -1,0 +1,44 @@
+<div class="container">
+	<h2>Create Acount</h2>
+	<%= form_for @profile do |f| %>
+	<div class="field" style="100%">
+		<% if @profile.errors.any? %>
+		<div id="error_explanation">
+			<h2>
+				<%= pluralize(@profile.errors.count, "error") %>
+				prohibited this from being saved:
+			</h2>
+			<p>
+				<ul>
+					<%= @profile.errors.full_messages.each do |msg| %>
+					<li>
+						<%= msg %>						
+					</li>
+				</ul>
+				<% end %>
+			</p>
+			<% if alert %>
+			<%= alert %>
+			<% end %>
+		</div>
+		<% end %>
+		<%= f.text_field :userid, placeholder: 'Enter a Username', class: 'form-control' %>
+		<%= f.email_field :email, placeholder: 'Enter your Email', class: 'form-control' %>
+		<%= f.password_field :password, placeholder: 'Create A Password', class: 'form-control' %>
+		<%= f.password_field :password_confirmation, placeholder: 'Confirm Password', class: 'form-control' %>
+			<%= f.text_field :name, placeholder: 'Enter your name', class: 'form-control' %>
+		<%= f.date_field :dob, placeholder: 'Enter your date of birth', class: 'form-control' %>
+		<%= f.text_field :address, placeholder: 'enter your address', class: 'form-control' %>
+			<%= f.text_field :city, placeholder: 'Enter your city', class: 'form-control' %>
+		<%= f.text_field :country, placeholder: 'Enter your country', class: 'form-control' %>
+		<%= f.file_field :image, placeholder: 'add a profile picture', class: 'form-control' %>
+
+
+
+		<%= f.submit 'Create Account' %>
+		<% end %>
+		</div>
+		</div>
+
+
+

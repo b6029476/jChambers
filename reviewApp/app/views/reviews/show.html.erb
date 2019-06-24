@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @review.author %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @review.rating %>
+</p>
+
+<p>
+  <strong>Reviewtext:</strong>
+  <%= @review.reviewtext %>
+</p>
+
+<p>
+  <strong>Reviewdate:</strong>
+  <%= @review.reviewdate %>
+</p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @review.userid %>
+</p>
+
+<p>
+  <strong>Image file path:</strong>
+  <%= @review.image_file_path %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @review.product_id %>
+</p>
+
+<%= link_to 'Edit', edit_review_path(@review) %> |
+<%= link_to 'Back', reviews_path %>
