@@ -16,8 +16,8 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get event" do
-    get static_pages_event_url
+  test "should get events" do
+    get static_pages_events_url
     assert_response :success
   end
 
