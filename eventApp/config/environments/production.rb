@@ -91,18 +91,27 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
-  config.action_mailer.default_url_options = { host: 'https://boiling-wave-23714.herokuapp.com' }
-  config.action_mailer.delivery_method = :smtp
+  
+  config.action_mailer.delivery_method = :sendmail
   config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
 
+  config.action_mailer.default_options = { from: 'railsmailerreferral@gmail.com' }
+ 
+ host = 'localhost:3000'
+ 
+ config.action_mailer.default_url_options = { :host => 'localhost:3000', protocol: 'http'}
+
+
+config.action_mailer.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-  :user_name => ENV['SENDGRID_USERNAME'],
-  :password => ENV['SENDGRID_PASSWORD'],
-  :domain => 'boiling-wave-23714.herokuapp.com',
-  :address => 'smtp.sendgrid.net',
+
+  :user_name => ENV['railsmailerreferral'],
+  :password => ENV['F!refl135'],
+  :domain => 'gmail.com',
+  :address => 'smtp.gmail.com',
   :port => 587,
-  :authentication => :plain,
+  :authentication => "login",
   :enable_starttls_auto => true
 }
 

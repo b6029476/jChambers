@@ -10,19 +10,38 @@
   </head>
 
   <body>
+    <% flash.each do|name, msg| %>
+      <%= content_tag(:div, msg, class: "alert alert-info") %>
+      <% end %>
     <div class="container">
 
    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
 
-      <h5 class="my-0 mr-md-auto font-weight-normal"> Sheffield Bookstore </h5>
+      <h5 class="my-0 mr-md-auto font-weight-normal"> Sheffield Events </h5>
 
       <nav class="my-2 my-md-0 mr-md-3">
 
 
-        <a class="p-2 text-dark" href="#"> <%= link_to "Home", '#' %> </a>
-<a class="p-2 text-dark" href="#"> <%= link_to "About Us", '#' %>  </a>
-        <a class="p-2 text-dark" href="#"> <%= link_to "Contact Us", '#' %>  </a>
-  <a class="p-2 text-dark" href="#"> <%= link_to "Events", '#' %> </a>
+        <a class="p-2 text-dark" href="#"> <%= link_to "Home", '/static_pages/home' %> </a>
+<a class="p-2 text-dark" href="#"> <%= link_to "About Us", '/static_pages/about' %>  </a>
+        <a class="p-2 text-dark" href="#"> <%= link_to "Contact Us", '/contacts/_contact' %>  </a>
+  <a class="p-2 text-dark" href="#"> <%= link_to "Events", '/static_pages/events' %> </a>
+  
+ 
+
+   <% if current_user %>
+           <a class="p-2 text-dark" href="#">
+            <%= link_to 'Log Out', session_path('active'), method: :delete %>
+          </a>
+          <a class="p-2 text-dark" href="#">
+            <%= current_user.userid %>
+          </a>
+          <% else %>
+          <a class="p-2 text-dark" href="#">
+            <%= link_to 'log in', new_session_path, class:"active_nav_link" %>
+          </a>
+           <a class="p-2 text-dark" href="#"><%= link_to "create account", new_user_path %></a>
+          <% end %>
 
 
        
@@ -32,6 +51,7 @@
 
     </div>
 </div>
+
     <%= yield %>
   </body>
 </html>

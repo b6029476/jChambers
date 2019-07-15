@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-	def index
+		def index
       @users=User.all
 	end
 
@@ -15,16 +15,17 @@ class UsersController < ApplicationController
 	def create 
 		@user = User.new(user_params)
 		if @user.save
-			redirect_to products_path, notice:
+			redirect_to root_path, notice:
 			"welcome #{@user.userid}! to reviewApp"
 		else 
 			render 'new'
 		end
 	end
-
-		private
+    
+    		private
 	def user_params
-		params.require(:user).permit(:userid, :email, :password, :name, :dob, :address, :city, :country, :image, :password_confirmation)
+		params.require(:user).permit(:userid, :email, :password, :registered, :password_confirmation)
 	end
+
 
 end
