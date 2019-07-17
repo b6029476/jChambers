@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_17_075912) do
+ActiveRecord::Schema.define(version: 2019_07_17_091639) do
 
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "ename"
@@ -21,6 +21,21 @@ ActiveRecord::Schema.define(version: 2019_07_17_075912) do
     t.date "date"
     t.time "time"
     t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "fname"
+    t.date "dob"
+    t.string "address"
+    t.string "city"
+    t.string "country"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+    t.string "userid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
