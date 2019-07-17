@@ -4,10 +4,10 @@ one:
   userid: MyString
   email: MyString
   password_digest: <%= BCrypt::Password.create('secret') %>
-  registered: 2019-07-12
+  registered: 2019-07-17
 
 two:
   userid: MyString
   email: MyString
   password_digest: <%= BCrypt::Password.create('secret') %>
-  registered: 2019-07-12
+  registered: 2019-07-17
