@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   resources :events
+  resources :users
   get 'static_pages/home'
   get 'static_pages/about'
   get 'static_pages/contact'
   get 'static_pages/events'
-  resources :users
   resources :sessions
   root 'static_pages#home'
   resources :home, only: [:new, :create]

@@ -25,7 +25,7 @@
         <a class="p-2 text-dark" href="#"> <%= link_to "Home", '/static_pages/home' %> </a>
 <a class="p-2 text-dark" href="#"> <%= link_to "About Us", '/static_pages/about' %>  </a>
         <a class="p-2 text-dark" href="#"> <%= link_to "Contact Us", '/contacts/_contact' %>  </a>
-  <a class="p-2 text-dark" href="#"> <%= link_to "Events", '/static_pages/events' %> </a>
+  <a class="p-2 text-dark" href="#"> <%= link_to "Events", events_path %> </a>
   
  
 
@@ -33,13 +33,16 @@
            <a class="p-2 text-dark" href="#">
             <%= link_to 'Log Out', session_path('active'), method: :delete %>
           </a>
+
+        <% if false %>
              <a class="p-2 text-dark" href="#">
             <%= link_to 'My Profile', profile_path(current_user.id) %>
           </a>
              <a class="p-2 text-dark" href="#">
             <%= link_to 'Edit Profile', edit_profile_path(current_user.id) %>
           </a>
-          </a>
+       <% end %>
+  
           <% else %>
           <a class="p-2 text-dark" href="#">
             <%= link_to 'log in', new_session_path, class:"active_nav_link" %>

@@ -1,5 +1,5 @@
 <div class="container">
-	<h2>Create Acoount</h2>
+	<h2>Create Account</h2>
 	<%= form_for @user do |f| %>
 	<div class="field" style="100%">
 		<% if @user.errors.any? %>
@@ -26,7 +26,7 @@
 		<%= f.email_field :email, placeholder: 'Enter your Email', class: 'form-control' %>
 		<%= f.password_field :password, placeholder: 'Create A Password', class: 'form-control' %>
 		<%= f.password_field :password_confirmation, placeholder: 'Confirm Password', class: 'form-control' %>
-				<%= f.date_field :registered, placeholder: 'enter todays date', class: 'form-control' %>
+		<%= f.date_field :registered, placeholder: 'Todays Date', class: 'form-control' %>
 		<%= f.submit 'Create Account' %>
 		<% end %>
 		</div>
