@@ -7,7 +7,7 @@ class CreateProfiles < ActiveRecord::Migration[5.2]
       t.string :city
       t.string :country
       t.attachment :image
-      t.string :userid
+      t.string :user_id
 
       t.timestamps
     end

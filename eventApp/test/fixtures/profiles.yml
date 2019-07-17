@@ -7,7 +7,7 @@ one:
   city: MyString
   country: MyString
   image: 
-  userid: MyString
+  user_id: MyString
 
 two:
   fname: MyString
@@ -16,4 +16,4 @@ two:
   city: MyString
   country: MyString
   image: 
-  userid: MyString
+  user_id: MyString

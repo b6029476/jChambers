@@ -34,14 +34,13 @@
             <%= link_to 'Log Out', session_path('active'), method: :delete %>
           </a>
 
-        <% if false %>
              <a class="p-2 text-dark" href="#">
             <%= link_to 'My Profile', profile_path(current_user.id) %>
           </a>
              <a class="p-2 text-dark" href="#">
             <%= link_to 'Edit Profile', edit_profile_path(current_user.id) %>
           </a>
-       <% end %>
+
   
           <% else %>
           <a class="p-2 text-dark" href="#">

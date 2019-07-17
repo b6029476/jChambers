@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :events
   resources :users
+  resources :profiles
   get 'static_pages/home'
   get 'static_pages/about'
   get 'static_pages/contact'
