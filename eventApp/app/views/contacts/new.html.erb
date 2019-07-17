@@ -1,0 +1,36 @@
+<div class="container">
+	<h2>Create Account</h2>
+	<%= form_for @contact do |f| %>
+	<div class="field" style="100%">
+		<% if @contact.errors.any? %>
+		<div id="error_explanation">
+			<h2>
+				<%= pluralize(@contact.errors.count, "error") %>
+				prohibited this from being saved:
+			</h2>
+			<p>
+				<ul>
+					<%= @contact.errors.full_messages.each do |msg| %>
+					<li>
+						<%= msg %>						
+					</li>
+				</ul>
+				<% end %>
+			</p>
+			<% if alert %>
+			<%= alert %>
+			<% end %>
+		</div>
+		<% end %>
+		<%= f.text_field :fname, placeholder: 'Enter your name', class: 'form-control' %>
+		<%= f.email_field :email, placeholder: 'Enter your Email', class: 'form-control' %>
+		<%= f.text_field :address, placeholder: 'Enter your Address', class: 'form-control' %>
+		<%= f.text_field :subject, placeholder: 'Subject of Enquery', class: 'form-control' %>
+			<%= f.text_area :reason, placeholder: 'Enquery', class: 'form-control' %>
+
+
+		<%= f.submit 'Submit Enquery' %>
+		<% end %>
+		</div>
+		</div>
+
