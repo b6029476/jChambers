@@ -5,10 +5,11 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.string :etype
       t.string :location
       t.string :city
-      t.float :price
-      t.date :date
-      t.time :time
-      t.text :description
+      t.string :tickets
+      t.date :edate
+      t.time :etime
+      t.string :description
+      t.string :user_id
 
       t.timestamps
     end

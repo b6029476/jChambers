@@ -33,7 +33,7 @@
            <a class="p-2 text-dark" href="#">
             <%= link_to 'Log Out', session_path('active'), method: :delete %>
           </a>
-
+          
              <a class="p-2 text-dark" href="#">
             <%= link_to 'My Profile', profile_path(current_user.id) %>
           </a>
@@ -41,7 +41,10 @@
             <%= link_to 'Edit Profile', edit_profile_path(current_user.id) %>
           </a>
 
-  
+           <a class="p-2 text-dark" href="#">
+            <%= link_to 'Add Event', new_event_path('active') %>
+          </a>
+          
           <% else %>
           <a class="p-2 text-dark" href="#">
             <%= link_to 'log in', new_session_path, class:"active_nav_link" %>

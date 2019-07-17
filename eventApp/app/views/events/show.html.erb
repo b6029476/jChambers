@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Ename:</strong>
+  <strong>Event name:</strong>
   <%= @event.ename %>
 </p>
 
 <p>
-  <strong>Etype:</strong>
+  <strong>Event type:</strong>
   <%= @event.etype %>
 </p>
 
@@ -21,18 +21,18 @@
 </p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @event.price %>
+  <strong>Tickets:</strong>
+  <%= @event.tickets %>
 </p>
 
 <p>
-  <strong>Date:</strong>
-  <%= @event.date %>
+  <strong>Event date:</strong>
+  <%= @event.edate %>
 </p>
 
 <p>
-  <strong>Time:</strong>
-  <%= @event.time %>
+  <strong>Event time:</strong>
+  <%= @event.etime %>
 </p>
 
 <p>
@@ -40,5 +40,4 @@
   <%= @event.description %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

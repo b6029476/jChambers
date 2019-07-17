@@ -15,13 +15,14 @@ class EventsTest < ApplicationSystemTestCase
     click_on "New Event"
 
     fill_in "City", with: @event.city
-    fill_in "Date", with: @event.date
     fill_in "Description", with: @event.description
+    fill_in "Edate", with: @event.edate
     fill_in "Ename", with: @event.ename
+    fill_in "Etime", with: @event.etime
     fill_in "Etype", with: @event.etype
     fill_in "Location", with: @event.location
-    fill_in "Price", with: @event.price
-    fill_in "Time", with: @event.time
+    fill_in "Tickets", with: @event.tickets
+    fill_in "User", with: @event.user_id
     click_on "Create Event"
 
     assert_text "Event was successfully created"
@@ -33,13 +34,14 @@ class EventsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "City", with: @event.city
-    fill_in "Date", with: @event.date
     fill_in "Description", with: @event.description
+    fill_in "Edate", with: @event.edate
     fill_in "Ename", with: @event.ename
+    fill_in "Etime", with: @event.etime
     fill_in "Etype", with: @event.etype
     fill_in "Location", with: @event.location
-    fill_in "Price", with: @event.price
-    fill_in "Time", with: @event.time
+    fill_in "Tickets", with: @event.tickets
+    fill_in "User", with: @event.user_id
     click_on "Update Event"
 
     assert_text "Event was successfully updated"

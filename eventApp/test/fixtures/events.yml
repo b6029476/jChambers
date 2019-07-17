@@ -5,17 +5,19 @@ one:
   etype: MyString
   location: MyString
   city: MyString
-  price: 1.5
-  date: 2019-07-10
-  time: 2019-07-10 10:18:54
-  description: MyText
+  tickets: MyString
+  edate: 2019-07-17
+  etime: 2019-07-17 21:42:44
+  description: MyString
+  user_id: MyString
 
 two:
   ename: MyString
   etype: MyString
   location: MyString
   city: MyString
-  price: 1.5
-  date: 2019-07-10
-  time: 2019-07-10 10:18:54
-  description: MyText
+  tickets: MyString
+  edate: 2019-07-17
+  etime: 2019-07-17 21:42:44
+  description: MyString
+  user_id: MyString

@@ -5,13 +5,13 @@
 <table>
   <thead>
     <tr>
-      <th>Ename</th>
-      <th>Etype</th>
+      <th>Event name</th>
+      <th>Event type</th>
       <th>Location</th>
       <th>City</th>
-      <th>Price</th>
-      <th>Date</th>
-      <th>Time</th>
+      <th>Tickets</th>
+      <th>Event date</th>
+      <th>Event time</th>
       <th>Description</th>
       <th colspan="3"></th>
     </tr>
@@ -24,18 +24,13 @@
         <td><%= event.etype %></td>
         <td><%= event.location %></td>
         <td><%= event.city %></td>
-        <td><%= event.price %></td>
-        <td><%= event.date %></td>
-        <td><%= event.time %></td>
+        <td><%= event.tickets %></td>
+        <td><%= event.edate %></td>
+        <td><%= event.etime %></td>
         <td><%= event.description %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Event', new_event_path %>
